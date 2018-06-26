@@ -50,7 +50,7 @@ a {
 /* Specific */
 
 .wallpaper {
-	background-image: url(images/chicago.jpg);
+	background-image: url(/images/chicago.jpg);
 	background-position: center;
 	background-size: cover;
 	opacity: 0.2;
