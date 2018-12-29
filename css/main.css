@@ -1,4 +1,4 @@
-/* Base Code */ 
+/* Base Code */
 /*Use for all websites*/
 
 html {
@@ -36,21 +36,23 @@ a {
 
 .job,
 .button,
-.button2 {
+.swimmingbutton {
 	font-family: 'Montserrat', 'Quicksand', sans-serif;
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
 }
 
 .button,
-.social a {
+.social,
+.swimmingbutton a {
 	transform-origin: center;
 	transition-duration: 75ms;
 }
 
 /* Specific */
+
 .wallpaper {
-	background-image: url(/images/chicago.jpg);
+	background-image: url(images/chicago.jpg);
 	background-position: center;
 	background-size: cover;
 	opacity: 0.2;
@@ -95,8 +97,8 @@ a {
 	height: 1px;
 	margin-bottom: 1.5rem;
 	margin-top: 1.5rem;
-	transform-origin: center left;
-	width: 4rem;
+	transform-origin: center;
+	width: 8rem;
 }
 
 .contact {
@@ -105,7 +107,8 @@ a {
 	vertical-align: top;
 }
 
-.button {
+.button,
+.swimmingbutton {
 	background-color: #fff;
 	border-radius: 290486px;
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -122,38 +125,19 @@ a {
 	will-change: box-shadow, transform;
 }
 
-.button2 {
-	background-color: #fff;
-	border-radius: 290486px;
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+/* .swimmingbutton {
+	position: fixed;
 	bottom: 0;
-	color: #9013fe;
-	/*display: inline-block;*/
-	font-size: 0.875rem;
-	line-height: 1;
-	padding: 0.75em 1.25em;
-	text-shadow: none;
-	transition-property: box-shadow, transform; /* USED FOR STATES */
-	user-select: none;
-	vertical-align: bottom;
-	white-space: nowrap;
-	will-change: box-shadow, transform;
-}
+	left: 0;
+	width: auto;
+} */
 
 .button:hover {
 	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
 	transform: scale(1.02) translateY(-4px);
 }
-.button2:hover {
-	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-	transform: scale(1.02) translateY(-4px);
-} 
 
 .button:active {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-	transform: scale(0.98) translateY(-2px);
-}
-.button2:active {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 	transform: scale(0.98) translateY(-2px);
 }
@@ -209,13 +193,29 @@ a {
 	max-width: 26rem;
 }
 
-.nextpage {
-	position: absolute;
-	bottom: 1.25em;
-	right: 0em;
-/*	min-height: 100vh;*/
-/*	display: flex;*/
+.otherAbout {
+	max-width: 39rem;
 }
+
+/* VIDEO */
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	/* display: block;
+	margin-left: 0;
+	margin-right: 0; */
+	bottom: 45px;
+	left: 55px;
+	width: 80%;
+	height: 80%;
+}
+
 
 /* 4. Responsiveness */
 
@@ -229,9 +229,6 @@ a {
 	.side {
 		margin-bottom: 3rem;
 		width: 100%;
-	} 
-	.nextpage {
-		flex-direction: column;
 	}
 }
 
@@ -250,11 +247,9 @@ a {
 		order: 2;
 		width: 20rem;
 	}
-	.about {
+	.about,
+	.otherAbout {
 		flex-grow: 1;
 		flex-shrink: 1;
-	} 
-	.nextpage {
-		align-items: center;
 	}
 }
